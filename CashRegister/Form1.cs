@@ -98,12 +98,6 @@ namespace CashRegister
             {
                 outputLabel.Text = "";
             }
-            double result;
-            if (!double.TryParse(amountInput.Text, out result))
-            {
-                
-            }
-
         }
 
         private void recieptButton_Click(object sender, EventArgs e)
@@ -127,7 +121,7 @@ namespace CashRegister
             outputLabel.Text = $"\n\n\n\n\n\n\n";
             Refresh();
             Thread.Sleep(1000);
-            outputLabel.Text += $"       1067 Ontario St, \n         Stratford, \n         ON N5A 6W6\n\n";
+            outputLabel.Text += $"          1067 Ontario St, \n            Stratford, \n            ON N5A 6W6\n\n";
             cr_printing.Play();
             Refresh();
             Thread.Sleep(2000);
@@ -167,13 +161,13 @@ namespace CashRegister
             cr_printing.Play();
             Refresh();
             Thread.Sleep(2000);
-            cr_printing_end.Play();
+            cr_printing.Play();
             neworderButton.Enabled = true;
         }
 
         private void neworderButton_Click(object sender, EventArgs e)
         {
-            cr_printing.Play();
+            cr_printing_end.Play();
             Thread.Sleep(2000);
             candlesInput.Text = "";
             creamInput.Text = "";

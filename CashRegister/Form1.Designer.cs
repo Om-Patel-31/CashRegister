@@ -322,7 +322,7 @@
             this.outputLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(1)))), ((int)(((byte)(141)))));
             this.outputLabel.Location = new System.Drawing.Point(538, 206);
             this.outputLabel.Name = "outputLabel";
-            this.outputLabel.Size = new System.Drawing.Size(485, 601);
+            this.outputLabel.Size = new System.Drawing.Size(433, 601);
             this.outputLabel.TabIndex = 28;
             // 
             // xLabel
