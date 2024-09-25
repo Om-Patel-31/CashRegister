@@ -66,7 +66,8 @@
             this.titlelogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.titlelogo.Font = new System.Drawing.Font("Courier New", 13F);
             this.titlelogo.Image = global::CashRegister.Properties.Resources.bathandbodyworkslogo_removebg_preview_copy;
-            this.titlelogo.Location = new System.Drawing.Point(559, 9);
+            this.titlelogo.Location = new System.Drawing.Point(472, 9);
+            this.titlelogo.Margin = new System.Windows.Forms.Padding(0);
             this.titlelogo.Name = "titlelogo";
             this.titlelogo.Size = new System.Drawing.Size(195, 179);
             this.titlelogo.TabIndex = 1;

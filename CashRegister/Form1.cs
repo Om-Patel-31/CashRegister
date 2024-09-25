@@ -65,6 +65,23 @@ namespace CashRegister
                 subtotalOutputLabel.Text = $"";
                 taxOutputLabel.Text = $"";
                 totalOutputLabel.Text = $"";
+
+                if (numOfCandles.GetType() != typeof(Int32))
+                {
+                    outputLabel.Text += $"\n\n\n\n\n\n\n           INVALID INPUT! AMOUNT OF CANDLES ARE NOT A VALID NUMBER!";
+                }
+                else if (numOfCream.GetType() != typeof(Int32))
+                {
+                    outputLabel.Text += $"\n\n\n\n\n\n\n           INVALID INPUT! AMOUNT OF CREAM IS NOT A VALID NUMBER!";
+                }
+                else if (numOfSoap.GetType() != typeof(Int32))
+                {
+                    outputLabel.Text += $"\n\n\n\n\n\n\n           INVALID INPUT! AMOUNT OF SOAP IS NOT A VALID NUMBER!";
+                }
+                else
+                {
+                    outputLabel.Text += $"";
+                }
             }
         }
 
@@ -121,11 +138,13 @@ namespace CashRegister
             outputLabel.Text = $"\n\n\n\n\n\n\n";
             Refresh();
             Thread.Sleep(1000);
-            outputLabel.Text += $"          1067 Ontario St, \n            Stratford, \n            ON N5A 6W6\n\n";
+            outputLabel.Text += $"      1067 Ontario St, \n       " +
+                $"   Stratford, \n   " +
+                $"    ON N5A 6W6\n\n";
             cr_printing.Play();
             Refresh();
             Thread.Sleep(2000);
-            outputLabel.Text += $"{DateTime.Now.ToShortDateString()}        {DateTime.Now.ToString("t")}";
+            outputLabel.Text += $"    {DateTime.Now.ToShortDateString()}        {DateTime.Now.ToString("t")}";
             cr_printing.Play();
             Refresh();
             Thread.Sleep(2000);
