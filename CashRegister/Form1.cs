@@ -36,7 +36,7 @@ namespace CashRegister
 
         public Form1()
         {
-            InitializeComponent();  
+            InitializeComponent();
         }
 
         private void calculateButton_Click(object sender, EventArgs e)
@@ -123,66 +123,248 @@ namespace CashRegister
             totalPriceOfCream = priceOfCream * numOfCream;
             totalPriceOfSoap = priceOfSoap * numOfSoap;
 
-            outputLabelTitle.Text = $"Bath";
-            cr_printing.Play();
-            Refresh();
-            Thread.Sleep(2000);
-            outputLabelTitle2.Text = $"{receiptTitle}&Body";
-            cr_printing.Play();
-            Refresh();
-            Thread.Sleep(2000);
-            outputLabelTitle3.Text = $"Works®️";
-            cr_printing.Play();
-            Refresh();
-            Thread.Sleep(2000);
-            outputLabel.Text = $"\n\n\n\n\n\n\n";
-            Refresh();
-            Thread.Sleep(1000);
-            outputLabel.Text += $"      1067 Ontario St, \n       " +
-                $"   Stratford, \n   " +
-                $"    ON N5A 6W6\n\n";
-            cr_printing.Play();
-            Refresh();
-            Thread.Sleep(2000);
-            outputLabel.Text += $"    {DateTime.Now.ToShortDateString()}        {DateTime.Now.ToString("t")}";
-            cr_printing.Play();
-            Refresh();
-            Thread.Sleep(2000);
-            outputLabel.Text += $"\n\n3_WICK_CANDLES @{numOfCandles}    {totalPriceOfCandles.ToString("C")}";
-            cr_printing.Play();
-            Refresh();
-            Thread.Sleep(2000);
-            outputLabel.Text += $"\nBODY_CREAM     @{numOfCream}    {totalPriceOfCream.ToString("C")}";
-            cr_printing.Play();
-            Refresh();
-            Thread.Sleep(2000);
-            outputLabel.Text += $"\nHAND_SOAP      @{numOfSoap}    {totalPriceOfSoap.ToString("C")}";
-            cr_printing.Play();
-            Refresh();
-            Thread.Sleep(2000);
-            outputLabel.Text += $"\n\nSUBTOTAL             {subtotal.ToString("C")}";
-            cr_printing.Play();
-            Refresh();
-            Thread.Sleep(2000);
-            outputLabel.Text += $"\nHST                  {taxAmount.ToString("C")}";
-            cr_printing.Play();
-            Refresh();
-            Thread.Sleep(2000);
-            outputLabel.Text += $"\n\nTOTAL                {total.ToString("C")}";
-            cr_printing.Play();
-            Refresh();
-            Thread.Sleep(2000);
-            outputLabel.Text += $"\n\nCHANGE               {change.ToString("C")}";
-            cr_printing.Play();
-            Refresh();
-            Thread.Sleep(2000);
-            outputLabel.Text += $"\n\n     HAVE A FANTASTIC DAY!";
-            cr_printing.Play();
-            Refresh();
-            Thread.Sleep(2000);
-            cr_printing.Play();
-            neworderButton.Enabled = true;
+            if (numOfCandles > 0 && numOfCream > 0 && numOfSoap > 0)
+            {
+                outputLabelTitle.Text = $"Bath";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabelTitle2.Text = $"{receiptTitle}&Body";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabelTitle3.Text = $"Works®️";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text = $"\n\n\n\n\n\n\n";
+                Refresh();
+                Thread.Sleep(1000);
+                outputLabel.Text += $"      1067 Ontario St, \n       " +
+                    $"   Stratford, \n   " +
+                    $"    ON N5A 6W6\n\n";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"    {DateTime.Now.ToShortDateString()}        {DateTime.Now.ToString("t")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\n\n3_WICK_CANDLES @{numOfCandles}    {totalPriceOfCandles.ToString("C")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\nBODY_CREAM     @{numOfCream}    {totalPriceOfCream.ToString("C")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\nHAND_SOAP      @{numOfSoap}    {totalPriceOfSoap.ToString("C")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\n\nSUBTOTAL             {subtotal.ToString("C")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\nHST                  {taxAmount.ToString("C")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\n\nTOTAL                {total.ToString("C")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\n\nCHANGE               {change.ToString("C")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\n\n     HAVE A FANTASTIC DAY!";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                cr_printing.Play();
+                neworderButton.Enabled = true;
+            }
+
+            if (numOfCandles == 0 && numOfCream>0 && numOfSoap > 0) 
+            {
+                outputLabelTitle.Text = $"Bath";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabelTitle2.Text = $"{receiptTitle}&Body";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabelTitle3.Text = $"Works®️";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text = $"\n\n\n\n\n\n\n";
+                Refresh();
+                Thread.Sleep(1000);
+                outputLabel.Text += $"      1067 Ontario St, \n       " +
+                    $"   Stratford, \n   " +
+                    $"    ON N5A 6W6\n\n";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"    {DateTime.Now.ToShortDateString()}        {DateTime.Now.ToString("t")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\nBODY_CREAM     @{numOfCream}    {totalPriceOfCream.ToString("C")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\nHAND_SOAP      @{numOfSoap}    {totalPriceOfSoap.ToString("C")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\n\nSUBTOTAL             {subtotal.ToString("C")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\nHST                  {taxAmount.ToString("C")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\n\nTOTAL                {total.ToString("C")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\n\nCHANGE               {change.ToString("C")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\n\n     HAVE A FANTASTIC DAY!";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                cr_printing.Play();
+                neworderButton.Enabled = true;
+            }
+
+            if (numOfCandles > 0 && numOfCream == 0 && numOfSoap > 0)
+            {
+                outputLabelTitle.Text = $"Bath";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabelTitle2.Text = $"{receiptTitle}&Body";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabelTitle3.Text = $"Works®️";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text = $"\n\n\n\n\n\n\n";
+                Refresh();
+                Thread.Sleep(1000);
+                outputLabel.Text += $"      1067 Ontario St, \n       " +
+                    $"   Stratford, \n   " +
+                    $"    ON N5A 6W6\n\n";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"    {DateTime.Now.ToShortDateString()}        {DateTime.Now.ToString("t")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\n\n3_WICK_CANDLES @{numOfCandles}    {totalPriceOfCandles.ToString("C")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\nHAND_SOAP      @{numOfSoap}    {totalPriceOfSoap.ToString("C")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\n\nSUBTOTAL             {subtotal.ToString("C")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\nHST                  {taxAmount.ToString("C")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\n\nTOTAL                {total.ToString("C")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\n\nCHANGE               {change.ToString("C")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\n\n     HAVE A FANTASTIC DAY!";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                cr_printing.Play();
+                neworderButton.Enabled = true;
+            }
+
+            if (numOfCandles > 0 && numOfCream > 0 && numOfSoap == 0)
+            {
+                outputLabelTitle.Text = $"Bath";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabelTitle2.Text = $"{receiptTitle}&Body";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabelTitle3.Text = $"Works®️";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text = $"\n\n\n\n\n\n\n";
+                Refresh();
+                Thread.Sleep(1000);
+                outputLabel.Text += $"      1067 Ontario St, \n       " +
+                    $"   Stratford, \n   " +
+                    $"    ON N5A 6W6\n\n";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"    {DateTime.Now.ToShortDateString()}        {DateTime.Now.ToString("t")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\n\n3_WICK_CANDLES @{numOfCandles}    {totalPriceOfCandles.ToString("C")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\nBODY_CREAM     @{numOfCream}    {totalPriceOfCream.ToString("C")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\n\nSUBTOTAL             {subtotal.ToString("C")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\nHST                  {taxAmount.ToString("C")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\n\nTOTAL                {total.ToString("C")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\n\nCHANGE               {change.ToString("C")}";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                outputLabel.Text += $"\n\n     HAVE A FANTASTIC DAY!";
+                cr_printing.Play();
+                Refresh();
+                Thread.Sleep(2000);
+                cr_printing.Play();
+                neworderButton.Enabled = true;
+            }
         }
+
+
 
         private void neworderButton_Click(object sender, EventArgs e)
         {
