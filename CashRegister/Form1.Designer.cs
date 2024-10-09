@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.titlelogo = new System.Windows.Forms.Label();
             this.titlestripe = new System.Windows.Forms.Label();
             this.candlesLabel = new System.Windows.Forms.Label();
             this.creamLabel = new System.Windows.Forms.Label();
@@ -59,18 +58,8 @@
             this.outputLabelTitle3 = new System.Windows.Forms.Label();
             this.outputLabelTitle2 = new System.Windows.Forms.Label();
             this.outputLabelTitle = new System.Windows.Forms.Label();
+            this.titleLogo = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // titlelogo
-            // 
-            this.titlelogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.titlelogo.Font = new System.Drawing.Font("Courier New", 13F);
-            this.titlelogo.Image = global::CashRegister.Properties.Resources.bathandbodyworkslogo_removebg_preview_copy;
-            this.titlelogo.Location = new System.Drawing.Point(472, 9);
-            this.titlelogo.Margin = new System.Windows.Forms.Padding(0);
-            this.titlelogo.Name = "titlelogo";
-            this.titlelogo.Size = new System.Drawing.Size(195, 179);
-            this.titlelogo.TabIndex = 1;
             // 
             // titlestripe
             // 
@@ -381,12 +370,31 @@
             this.outputLabelTitle.TabIndex = 33;
             this.outputLabelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // titleLogo
+            // 
+            this.titleLogo.BackColor = System.Drawing.Color.Transparent;
+            this.titleLogo.BackgroundImage = global::CashRegister.Properties.Resources.bathandbodyworkslogo_removebg_preview_copy;
+            this.titleLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.titleLogo.Cursor = System.Windows.Forms.Cursors.No;
+            this.titleLogo.Enabled = false;
+            this.titleLogo.FlatAppearance.BorderSize = 0;
+            this.titleLogo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.titleLogo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.titleLogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.titleLogo.ForeColor = System.Drawing.Color.Transparent;
+            this.titleLogo.Location = new System.Drawing.Point(522, 12);
+            this.titleLogo.Name = "titleLogo";
+            this.titleLogo.Size = new System.Drawing.Size(194, 178);
+            this.titleLogo.TabIndex = 34;
+            this.titleLogo.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(86)))), ((int)(((byte)(153)))));
             this.ClientSize = new System.Drawing.Size(1174, 814);
+            this.Controls.Add(this.titleLogo);
             this.Controls.Add(this.outputLabelTitle);
             this.Controls.Add(this.outputLabelTitle2);
             this.Controls.Add(this.outputLabelTitle3);
@@ -415,7 +423,6 @@
             this.Controls.Add(this.soapLabel);
             this.Controls.Add(this.creamLabel);
             this.Controls.Add(this.candlesLabel);
-            this.Controls.Add(this.titlelogo);
             this.Controls.Add(this.titlestripe);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -429,7 +436,6 @@
         #endregion
 
         private System.Windows.Forms.Label titlestripe;
-        private System.Windows.Forms.Label titlelogo;
         private System.Windows.Forms.Label candlesLabel;
         private System.Windows.Forms.Label creamLabel;
         private System.Windows.Forms.Label soapLabel;
@@ -458,6 +464,7 @@
         private System.Windows.Forms.Label outputLabelTitle3;
         private System.Windows.Forms.Label outputLabelTitle2;
         private System.Windows.Forms.Label outputLabelTitle;
+        private System.Windows.Forms.Button titleLogo;
     }
 }
 
