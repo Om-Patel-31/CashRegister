@@ -482,5 +482,36 @@ namespace CashRegister
                 neworderButton.Enabled = true;
             }
         }
+
+        private void neworderButton_Click(object sender, EventArgs e)
+        {
+            //resetting all variables, buttons, text boxes and label
+            cr_printing_end.Play();
+            numOfCandles = 0;
+            numOfCream = 0;
+            numOfSoap = 0;
+            itemsPurchased = 0;
+            subtotal = 0;
+            taxAmount = 0;
+            total = 0;
+            change = 0;
+            amountTendered = 0;
+            totalPriceOfCandles = 0;
+            totalPriceOfCream = 0;
+            totalPriceOfSoap = 0;
+            changeButton.Enabled = false;
+            recieptButton.Enabled = false;
+            neworderButton.Enabled = false;
+            outputLabel.Text = "";
+            candlesInput.Text = "";
+            creamInput.Text = "";
+            soapInput.Text = "";
+            amountInput.Text = "";
+            subtotalOutputLabel.Text = "";
+            taxOutputLabel.Text = "";
+            outputLabelTitle.Text = "";
+            outputLabelTitle2.Text = "";
+            outputLabelTitle3.Text = "";
+        }
     }
 }
