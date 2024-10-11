@@ -509,6 +509,8 @@ namespace CashRegister
             amountInput.Text = "";
             subtotalOutputLabel.Text = "";
             taxOutputLabel.Text = "";
+            totalOutputLabel.Text = "";
+            changeOutputLabel.Text = "";
             outputLabelTitle.Text = "";
             outputLabelTitle2.Text = "";
             outputLabelTitle3.Text = "";
